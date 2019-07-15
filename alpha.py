@@ -191,6 +191,9 @@ def collect_urls():
 
 	time.sleep(2)
 
+	for i in range(0, 6):
+		hitlist.pop(0)
+
 	test_label.configure(text = "Hitlist created of length " + str(len(hitlist)) + ".")
 	print("Created hitlist of length: " + str(len(hitlist)))
 
@@ -226,6 +229,10 @@ def strip_info(arg1):
 	dp = ["NIX", "NIX", "NIX", "NIX", "NIX", "NIX", "NIX"]
 
 	driver.get(arg1)
+
+	time.sleep(1)
+
+	driver.refresh()
 
 	scroller = 0
 	for x in range(10):
@@ -446,7 +453,7 @@ def scrape_li():
 	nix_check = False
 	for hit in hitlist:
 		nix_check = False
-		print("Sucessful Profiles: " + str(hitcount) + " / Total Profiles: " + str(total_counted) + ". This URL = " + hit)
+		print("Successful Profiles: " + str(hitcount) + " / Total Profiles: " + str(total_counted) + ". This URL = " + hit)
 		hit_info = strip_info(hit)
 		for h in hit_info:
 			if (h=="NIX"):

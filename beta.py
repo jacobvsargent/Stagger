@@ -73,7 +73,7 @@ def open_tfact():
 
 	keep_going = True
 
-	with open('data.csv', 'r') as csvFile:
+	with open('clemson_university_2021.csv', 'r') as csvFile:
 		read_data = csv.reader(csvFile)
 		for x in read_data:
 			if (not x[0]=="First Name" and len(x[0])>0):
