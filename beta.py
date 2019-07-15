@@ -33,7 +33,7 @@ all_profiles = []
 linecount = 1
 
 #add chromedriver to environmental variables in sys
-path = "C:\\Drivers\\chromedriver.exe"
+path = "C:\\Stagger\\chromedriver.exe"
 sys.path.append(path)
 
 def open_tfact():
@@ -44,7 +44,7 @@ def open_tfact():
 
 	time.sleep(2)
 
-	driver = webdriver.Chrome('C:\\Drivers\\chromedriver.exe')
+	driver = webdriver.Chrome('C:\\Stagger\\chromedriver.exe')
 	sign_in_link = "https://teachforamerica.okta.com/login/login.htm?fromURI=%2Fapp%2FUserHome"
 	driver.get(sign_in_link)
 
